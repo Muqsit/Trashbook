@@ -1,0 +1,53 @@
+#Configuration for PlanB v1.3.0
+kickReason: "§b[§eRBC§b]§a If you're caught hacking again, you will be banned!"
+#Sets the kick reason when a potential hacker is detected, refer to values.txt for entire list of usable values
+noPermissionMessage: "§cYou do not not have permissions to restore OPs."
+#Message sent to command runner, if they don't have permissions to restore OPs
+notifyAll: true
+#Set to true to announce when a potential hacker is detected and kicked
+notifyMessage: "§eDeopped and kicked potential hacker: {PLAYER_NAME}"
+#Message that is broadcasted when a potential hacker is detected and kicked, refer to values.txt for entire list of usable values
+restoreMessage: ""
+#Message sent to OPs whose OP status is being restored, refer to values.txt for entire list of usable values
+
+# Config file for VoteReward by LDX.
+#
+# Official VoteReward Server List Directory:
+# http://votereward.mcpe.me/?p=lists
+#
+# Config Variables:
+#   {USERNAME} ... The username of the player who voted. ....... Commands and message.
+#   {NICKNAME} ... The display name of the player who voted. ... Commands and message.
+#   {X} .......... The X coordinate of the player. ............. Commands only.
+#   {Y} .......... The Y coordinate of the player. ............. Commands only.
+#   {Y1} ......... The Y coordinate of the player plus 1. ...... Commands only.
+#   {Z} .......... The Z coordinate of the player. ............. Commands only.
+
+# EssentialsPE style color codes can be used in the message and commands.
+
+# Message to broadcast to the server when a player votes.
+Message: "&8»\n&8» &e{USERNAME}&r voted with &b/vote &rand got\n&8»&r food, diamonds, armor and more!\n&8»"
+
+RewardMessage: "§b---§l[§r§eVote Rewards§b§l]§r§b---\n§aColor chat permission\n§aCash reward §8(§e$5000§8)\n§aDiamond Sword §8[§eSharpness III§8]\n§aDiamond Pickaxe §8[§eEfficiency III§8]\n§aHaunt of Judgement Sword §8[§eBlindness I§8]\n§aBook of Ritual Expansion §8(§ex3§8)\n§7§o...and 9 more (minor) items."
+# List of items to give players when they vote. Format: ID:Damage:Amount
+Items:
+  - "19:0:10"
+  - "79:0:8"
+  - "155:0:128"
+  - "265:0:10"
+  - "57:0:3"
+  - "388:0:4"
+  - "373:11:6"
+  - "373:33:6"
+  - "384:0:8"
+  - "403:0:3"
+
+# List of commands to execute when a player votes.
+Commands:
+  - "particle portal {X} {Y1} {Z} 2 2 2 10000"
+  - "givemoney {USERNAME} 5000"
+  - "give {USERNAME} diamond_sword 1 {ench:[{id:9s,lvl:3s}]}"
+  - "give {USERNAME} diamond_pickaxe 1 {ench:[{id:15s,lvl:3s}]}"
+  - "soesetuperm {USERNAME} chat.enable"
+  - "soesetuperm {USERNAME} essentials.colorchat"
+  - "give {USERNAME} diamond_sword 1 {display:{Name:'§r§bHaunt of Judgement'},ench:[{id:10s,lvl:1s}]}"
